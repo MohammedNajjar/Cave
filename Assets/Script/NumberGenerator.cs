@@ -9,6 +9,7 @@ public class NumberGenerator : MonoBehaviour
 
     void Start()
     {
+        
         while(number<20){
             Debug.Log(Random.Range(1,21));
             number++;
