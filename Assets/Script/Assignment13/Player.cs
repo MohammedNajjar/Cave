@@ -15,7 +15,7 @@ public class Player
     /*
      public Player()
         {
-           
+            playerCount++;
         }
     */
     public void InitializePlayer(string name, int initialHealth)
