@@ -5,7 +5,7 @@ using UnityEngine;
 
 using UnityEngine;
 
-public class Player
+public class Player1
 {
     public string playerName;
     public int health;
