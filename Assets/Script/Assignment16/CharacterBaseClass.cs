@@ -4,19 +4,19 @@ namespace Assignment18
 {
     public class Character
     {
-    
-        public string name;         
+     
+        public string name;  
         private int health;        
         protected Position position; 
 
-      
+        
         public int Health
         {
             get { return health; }
             set { health = Mathf.Clamp(value, 0, 100); } 
         }
 
-      
+        
         public Character(string name, int health, Position position)
         {
             this.name = name;
@@ -24,12 +24,12 @@ namespace Assignment18
             this.position = position;
         }
 
-
+        
         public Character() : this("No name", 100, new Position(0, 0, 0))
         {
         }
 
-   
+        
         public virtual void DisplayInfo()
         {
             Debug.Log($"Name: {name}");
@@ -37,16 +37,19 @@ namespace Assignment18
             position.PrintPosition();
         }
 
+        
         public void Attack(int damage, Character target)
         {
             PerformAttack(damage, target, null);
         }
+
        
         public void Attack(int damage, Character target, string attackType)
         {
             PerformAttack(damage, target, attackType);
         }
 
+        
         private void PerformAttack(int damage, Character target, string attackType)
         {
             target.Health -= damage;
